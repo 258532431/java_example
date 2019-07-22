@@ -1,6 +1,7 @@
 /cloud_logs/
 HELP.md
 /target/
+/out/
 !.mvn/wrapper/maven-wrapper.jar
 
 ### STS ###
@@ -14,7 +15,6 @@ HELP.md
 
 ### IntelliJ IDEA ###
 .idea
-.out
 *.iws
 *.iml
 *.ipr
