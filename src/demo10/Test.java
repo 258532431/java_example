@@ -2,7 +2,7 @@ package demo10;
 
 /**
  * @program: java_example
- * @description: 测试类
+ * @description: 代理模式-测试类
  * @author: yangchenglong
  * @create: 2019-07-23 16:50
  */
