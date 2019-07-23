@@ -18,6 +18,11 @@ public class Test {
     //如何解决：让其子类实现工厂接口，返回的也是一个抽象的产品。
     //关键代码：创建过程在其子类执行
 
+    //使用场景：
+    // 1、日志记录器：记录可能记录到本地硬盘、系统事件、远程服务器等，用户可以选择记录日志到什么地方。
+    // 2、数据库访问，当用户不知道最后系统采用哪一类数据库，以及数据库可能有变化时。
+    // 3、设计一个连接服务器的框架，需要三个协议，"POP3"、"IMAP"、"HTTP"，可以把这三个作为产品类，共同实现一个接口。
+
     //获得水果
     public static FruitService getFruit(FruitFactory fruitFactory){
         FruitService fruitService = fruitFactory.produce();

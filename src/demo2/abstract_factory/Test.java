@@ -14,6 +14,10 @@ public class Test {
     //如何解决：在一个产品族里面，定义多个产品。
     //关键代码：在一个工厂里聚合多个同类产品。
 
+    //使用场景：
+    // 1、QQ 换皮肤，一整套一起换。
+    // 2、生成不同操作系统的程序。
+
     public static void main(String[] args) {
         AbstractFruitFactory fruitFactory = FactoryProducer.getFactory("fruitFactory");
         FruitService apple = fruitFactory.getFruit("apple");
