@@ -1,4 +1,4 @@
-package demo2.simple_factory;
+package demo2.abstract_factory;
 
 /**
  * @Author: yangchenglong on 2019/7/23
