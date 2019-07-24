@@ -17,8 +17,14 @@ public class Test {
     // 1、扩展一个类的功能。
     // 2、动态增加功能，动态撤销。
 
-    public static void main(String[] args) {
+    //M416自动步枪，只能打近距离和中距离（太远看不见），通过装饰器加装六倍镜，增加打击远距离的能力
 
+    public static void main(String[] args) {
+        GunsService m416 = new M416();
+        m416.shot();
+
+        GunsService sixm416 = new EnhanceM416Decorator(new M416());
+        sixm416.shot();
     }
 
 }
