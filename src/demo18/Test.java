@@ -2,7 +2,7 @@ package demo18;
 
 /**
  * @program: java_example
- * @description: 测试类
+ * @description: 观察者模式-测试类
  * @author: yangchenglong
  * @create: 2019-07-24 16:49
  */
@@ -22,7 +22,23 @@ public class Test {
 
     //注意事项： 1、JAVA 中已经有了对观察者模式的支持类。 2、避免循环引用。 3、如果顺序执行，某一观察者错误会导致系统卡壳，一般采用异步方式。
 
+    //拍卖师拍卖时，会通知所有买家物品价格变化，当买家离场后，就收不到价格通知了
+
     public static void main(String[] args) {
+        Auctioneer subject = new Auctioneer();//被观察者
+
+        Observer buyer1 = new Buyer("张三");
+        Observer buyer2 = new Buyer("李四");
+
+        //添加观察者
+        subject.addObserver(buyer1);
+        subject.addObserver(buyer2);
+        subject.setMsg("第一件物品起拍价200元");
+
+        System.out.println("----------------------------------------------");
+
+        subject.removeObserver(buyer1);//移除一个观察者
+        subject.setMsg("第二件物品起拍价500元");
 
     }
 
