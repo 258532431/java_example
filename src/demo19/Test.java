@@ -19,9 +19,29 @@ public class Test {
     //使用场景： 1、需要保存/恢复数据的相关状态场景。 2、提供一个可回滚的操作。
     //注意事项： 1、为了符合迪米特原则，还要增加一个管理备忘录的类。 2、为了节约内存，可使用原型模式+备忘录模式。
 
-    //
+    //小明借给小红100元，同时在备忘录记录了自己借给小红100元，防止遗忘， 当小明忘记时，可从备忘录查看
 
     public static void main(String[] args) {
+        Originator xiaoming = new Originator();//小明
+        Caretaker caretaker = new Caretaker();//负责人
+        xiaoming.setName("小红");
+        xiaoming.setAmt(100);
+        System.out.println("小明借给小红100元");
+
+        Memento memento = xiaoming.saveToMemento();
+        System.out.println("小明怕忘记，写进了备忘录");
+        caretaker.add(memento);//负责人保管备忘录
+
+        xiaoming.setName("小黄");
+        xiaoming.setAmt(200);
+        System.out.println("小明又借给小黄100元");
+        memento = xiaoming.saveToMemento();
+        System.out.println("小明也怕忘记，又写进了备忘录");
+        caretaker.add(memento);//负责人保管备忘录
+
+        System.out.println("------------ 小明忘记了，开始翻看备忘录 --------------");
+        System.out.println(caretaker.get(0).getContent());
+        System.out.println(caretaker.get(1).getContent());
 
     }
 
