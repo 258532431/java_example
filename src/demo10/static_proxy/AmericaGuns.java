@@ -1,4 +1,4 @@
-package demo10;
+package demo10.static_proxy;
 
 /**
  * @program: java_example

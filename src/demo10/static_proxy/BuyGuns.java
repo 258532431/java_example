@@ -1,4 +1,4 @@
-package demo10;
+package demo10.static_proxy;
 
 /**
  * @Author: yangchenglong on 2019/7/23

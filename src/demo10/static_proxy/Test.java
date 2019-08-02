@@ -1,8 +1,8 @@
-package demo10;
+package demo10.static_proxy;
 
 /**
  * @program: java_example
- * @description: 代理模式-测试类
+ * @description: 静态代理模式-测试类
  * @author: yangchenglong
  * @create: 2019-07-23 16:50
  */
